@@ -51,7 +51,6 @@ contract WeirdBuilding is Building {
 
   function isLastFloor(uint _floor) override external returns (bool) {
       require(_floor <= 42, "Floor is over the top.");
-      require(block.number > 0, "Assume calling from non zero block.");
 
       if (_floor < 42) {
           return false;
